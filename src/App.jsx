@@ -1,43 +1,23 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
+import passwordGenerator from './generator/passwdGen'
 
-function App() {
-  const [count, setCount] = useState(0)
+function App () {
+  const [password, setPassword] = useState('')
+  const [length, setLength]  = useState(0)
+
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className='App'>
+      <h1>Passgen</h1>
+      <input type="number" min="4" onChange={(event)=>setLength(event.target.value)}/>
+      <button onClick={() => setPassword(passwordGenerator(length, "charonly"))}>
+        英数字のみで生成
+      </button>
+      <button onClick={() => setPassword(passwordGenerator(length, "symbolsInclude"))}>
+        英数字+記号で生成
+      </button>
+      <p>{password}</p>
     </div>
   )
 }
