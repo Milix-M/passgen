@@ -25,4 +25,4 @@ $ npm run dev
 [Milix-M](https://github.com/Milix-M)
 
 ## Licence
-[MIT](https://github.com/Milix-M/passgen/blob/main/LICENCE)
+[MIT](https://github.com/Milix-M/passgen/blob/main/LICENSE)
