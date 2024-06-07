@@ -5,7 +5,6 @@ import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import FormControl from '@mui/material/FormControl'
 import FormControlLabel from '@mui/material/FormControlLabel'
-import FormLabel from '@mui/material/FormLabel'
 import Radio from '@mui/material/Radio'
 import RadioGroup from '@mui/material/RadioGroup'
 
@@ -95,7 +94,7 @@ function App () {
           <span className='text-center text-xl'>生成されたパスワード:</span>
           <p className='text-xl p-2 text-center break-all'>{password}</p>
           <Button variant='contained' onClick={() => copyToClipboard()}>
-            COPY PASSOWORD
+            COPY PASSWORD
           </Button>
         </div>
       )}
