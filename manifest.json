@@ -1,6 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Passgen -a simple password generator",
+    "description": "シンプルなパスワードジェネレーターです。 任意桁数と英数字のみ、英数字+記号でパスワードを生成できます。",
     "version": "0.1",
     "action": { "default_popup": "index.html" }
   }
